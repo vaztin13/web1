@@ -1,0 +1,91 @@
+<article class="content">
+
+  <body>
+    <div class="admin_form">
+      <div class="header_form">
+        <h1>ADMIN ONLY</h1>
+      </div>
+      <div class="game_list">
+        <form id="form">
+          <div class="inputs_table">
+            <select name="game_version" id="">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <input type="text" id="game_name" name="game_name" placeholder="Nombre del juego" required>
+            <input type="number" id="game_discount" name="game_discount" placeholder="Descuento" min="0" max="100"
+              required>
+            <input type="number" step="0.01" id="game_price" name="game_price" placeholder="Precio" min="0" required>
+          </div>
+          <div class="btn_table">
+            <button id="submit_form">Enviar</button>
+            <button type="button" id="buttonReset">Vaciar inputs</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="sendMsg"></div>
+
+      <div id="refreshBtn"><button><i class="fa-solid fa-arrow-rotate-right"></i></button></div>
+
+      <div class="shop_table_div">
+        <table class="dark_table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>VERSIONES</th>
+              <th>JUEGO</th>
+              <th>DESCUENTO</th>
+              <th>PRECIO</th>
+            </tr>
+          </thead>
+          <tbody id="tableJson">
+
+          </tbody>
+        </table>
+        <!-- paginacion -->
+        <div id="paginate">
+          <button id="prevBtn">Anterior</button>
+          <div id="whatPage">Pagina 1</div>
+          <button id="nextBtn">Siguiente</button>
+        </div>
+      </div>
+      <!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Editar</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form id="formEdit" action="">
+          <fieldset id="inputsPUT">
+            <input id="inputEditId" type="hidden" name="id" required>
+            <select name="editVersionPUT" id="">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <input name="gamePUT" id="inputGamePUT" type="text" required>
+            <input name="discountPUT" id="inputDiscountPUT" type="number" min="0" max="100" required>
+            <input name="pricePUT" id="inputPricePUT" type="number" min="0" step="0.01" required>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-bs-dismiss="modal">Cerrar</button>
+              <button class="btn btn-default">Enviar</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  </body>
+</article>
